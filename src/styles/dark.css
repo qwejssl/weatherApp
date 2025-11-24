@@ -1,0 +1,58 @@
+html[data-theme='dark'] {
+	--bg: #0e131a;
+	--elev: #161c25;
+	--elev-2: #1e2631;
+
+	--text: #eef3fa;
+	--muted: #9ca9b8;
+
+	--accent: #80d0f5;
+	--accent-ink: #0e151d;
+
+	--border: rgba(255, 255, 255, 0.12);
+	--soft-border: rgba(255, 255, 255, 0.08);
+	--chip-bg: #1f2a38;
+	--btn-bg: #1e2835;
+	--btn-border: rgba(255, 255, 255, 0.1);
+	--list-bg: rgba(255, 255, 255, 0.05);
+	--list-border: rgba(255, 255, 255, 0.08);
+	--progress-bg: rgba(255, 255, 255, 0.1);
+
+	--shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+body {
+	background: radial-gradient(1200px 600px at 30% -20%, #182030, transparent),
+		var(--bg);
+	color: var(--text);
+}
+
+.card {
+	background: linear-gradient(180deg, var(--elev), var(--elev-2));
+	border: 1px solid var(--soft-border);
+	box-shadow: var(--shadow);
+}
+
+.input,
+.pill,
+.icon-btn {
+	background: var(--btn-bg);
+	color: var(--text);
+	border-color: var(--btn-border);
+}
+.pill.ghost {
+	background: transparent;
+}
+
+.chart-tick {
+	fill: color-mix(in oklab, var(--text) 45%, transparent);
+}
+.chart line {
+	stroke: color-mix(in oklab, var(--text) 14%, transparent);
+}
+
+.tab.active {
+	background: var(--accent);
+	color: var(--accent-ink);
+	border-color: transparent;
+}
