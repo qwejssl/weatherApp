@@ -1,6 +1,6 @@
 import { geocode, getWeather } from '../api/openmeteo.js'
 import { getState, setState } from '../store/store.js'
-import { setJSON } from '../utils/storege.js'
+import { setJSON } from '../utils/storage.js'
 
 export function HeaderBar(root) {
 	root.innerHTML = `

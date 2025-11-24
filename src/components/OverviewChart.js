@@ -1,6 +1,6 @@
 import { subscribe } from '../store/store.js'
 
-export function OverviewChart(root) {
+export default function OverviewChart(root) {
 	root.innerHTML = `
     <div class="title-row" style="margin-bottom:10px">
       <div class="tabs">

@@ -1,14 +1,17 @@
-import { getWeather } from '../api/openmeteo.js'
-import { CurrentHourly } from '../components/CurrentHourly.js'
-import { ForecastList } from '../components/ForecastList.js'
-import { HeaderBar } from '../components/HeaderBar.js'
-import { MapPanel } from '../components/MapPanel.js'
-import { OverviewChart } from '../components/OverviewChart.js'
-import { Tabs } from '../components/Tabs.js'
-import { Toast } from '../components/Toast.js'
-import { setState, subscribe } from '../store/store.js'
+import HeaderBar from './components/HeaderBar.js';
+import MapPanel from './components/MapPanel.js';
+import OverviewChart from './components/OverviewChart.js';
+import Tabs from './components/Tabs.js';
+import Toast from './components/Toast.js';
 
-import { getJSON, setJSON } from './storege.js'
+import store from './store/store.js';
+
+import { loadFromStorage } from './utils/storage.js';
+import { formatSomething } from './utils/format.js';
+import { getCurrentTime } from './utils/time.js';
+
+import { getWeather } from './api/openmeteo.js';
+
 
 const root = document.getElementById('root')
 root.innerHTML = `
